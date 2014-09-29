@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cappuccinoRadioButton = new System.Windows.Forms.RadioButton();
             this.icedCappuccinoRadioButton = new System.Windows.Forms.RadioButton();
             this.icedLatteRadioButton = new System.Windows.Forms.RadioButton();
             this.latteRadioButton = new System.Windows.Forms.RadioButton();
@@ -53,7 +54,6 @@
             this.newOrderButton = new System.Windows.Forms.Button();
             this.summaryButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
-            this.cappuccinoRadioButton = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -114,6 +114,7 @@
             this.clearButton.TabIndex = 5;
             this.clearButton.Text = "&Clear for Next Item";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // calculateButton
             // 
@@ -173,6 +174,17 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Coffee Selections";
+            // 
+            // cappuccinoRadioButton
+            // 
+            this.cappuccinoRadioButton.AutoSize = true;
+            this.cappuccinoRadioButton.Location = new System.Drawing.Point(19, 19);
+            this.cappuccinoRadioButton.Name = "cappuccinoRadioButton";
+            this.cappuccinoRadioButton.Size = new System.Drawing.Size(82, 17);
+            this.cappuccinoRadioButton.TabIndex = 4;
+            this.cappuccinoRadioButton.Text = "C&appuccino";
+            this.cappuccinoRadioButton.UseVisualStyleBackColor = true;
+            this.cappuccinoRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // icedCappuccinoRadioButton
             // 
@@ -295,6 +307,7 @@
             this.newOrderButton.TabIndex = 1;
             this.newOrderButton.Text = "&New Order";
             this.newOrderButton.UseVisualStyleBackColor = true;
+            this.newOrderButton.Click += new System.EventHandler(this.newOrderButton_Click);
             // 
             // summaryButton
             // 
@@ -304,6 +317,7 @@
             this.summaryButton.TabIndex = 2;
             this.summaryButton.Text = "&Summary";
             this.summaryButton.UseVisualStyleBackColor = true;
+            this.summaryButton.Click += new System.EventHandler(this.summaryButton_Click);
             // 
             // exitButton
             // 
@@ -314,17 +328,6 @@
             this.exitButton.Text = "E&xit";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            // 
-            // cappuccinoRadioButton
-            // 
-            this.cappuccinoRadioButton.AutoSize = true;
-            this.cappuccinoRadioButton.Location = new System.Drawing.Point(19, 19);
-            this.cappuccinoRadioButton.Name = "cappuccinoRadioButton";
-            this.cappuccinoRadioButton.Size = new System.Drawing.Size(82, 17);
-            this.cappuccinoRadioButton.TabIndex = 4;
-            this.cappuccinoRadioButton.Text = "C&appuccino";
-            this.cappuccinoRadioButton.UseVisualStyleBackColor = true;
-            this.cappuccinoRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // BillingForm
             // 
