@@ -43,7 +43,6 @@
             this.icedLatteRadioButton = new System.Windows.Forms.RadioButton();
             this.latteRadioButton = new System.Windows.Forms.RadioButton();
             this.espressoRadioButton = new System.Windows.Forms.RadioButton();
-            this.cappuccinoRadioButton = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.taxTextBox = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@
             this.newOrderButton = new System.Windows.Forms.Button();
             this.summaryButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.cappuccinoRadioButton = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -123,6 +123,7 @@
             this.calculateButton.TabIndex = 4;
             this.calculateButton.Text = "&Calculate Selection";
             this.calculateButton.UseVisualStyleBackColor = true;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
             // taxCheckBox
             // 
@@ -161,11 +162,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cappuccinoRadioButton);
             this.groupBox2.Controls.Add(this.icedCappuccinoRadioButton);
             this.groupBox2.Controls.Add(this.icedLatteRadioButton);
             this.groupBox2.Controls.Add(this.latteRadioButton);
             this.groupBox2.Controls.Add(this.espressoRadioButton);
-            this.groupBox2.Controls.Add(this.cappuccinoRadioButton);
             this.groupBox2.Location = new System.Drawing.Point(218, 19);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 148);
@@ -182,6 +183,7 @@
             this.icedCappuccinoRadioButton.TabIndex = 4;
             this.icedCappuccinoRadioButton.Text = "Iced Ca&ppuccino";
             this.icedCappuccinoRadioButton.UseVisualStyleBackColor = true;
+            this.icedCappuccinoRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // icedLatteRadioButton
             // 
@@ -192,6 +194,7 @@
             this.icedLatteRadioButton.TabIndex = 3;
             this.icedLatteRadioButton.Text = "&Iced Latte";
             this.icedLatteRadioButton.UseVisualStyleBackColor = true;
+            this.icedLatteRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // latteRadioButton
             // 
@@ -202,6 +205,7 @@
             this.latteRadioButton.TabIndex = 2;
             this.latteRadioButton.Text = "La&tte";
             this.latteRadioButton.UseVisualStyleBackColor = true;
+            this.latteRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // espressoRadioButton
             // 
@@ -212,16 +216,7 @@
             this.espressoRadioButton.TabIndex = 1;
             this.espressoRadioButton.Text = "Espress&o";
             this.espressoRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // cappuccinoRadioButton
-            // 
-            this.cappuccinoRadioButton.AutoSize = true;
-            this.cappuccinoRadioButton.Location = new System.Drawing.Point(19, 16);
-            this.cappuccinoRadioButton.Name = "cappuccinoRadioButton";
-            this.cappuccinoRadioButton.Size = new System.Drawing.Size(82, 17);
-            this.cappuccinoRadioButton.TabIndex = 0;
-            this.cappuccinoRadioButton.Text = "C&appuccino";
-            this.cappuccinoRadioButton.UseVisualStyleBackColor = true;
+            this.espressoRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -318,6 +313,18 @@
             this.exitButton.TabIndex = 3;
             this.exitButton.Text = "E&xit";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // cappuccinoRadioButton
+            // 
+            this.cappuccinoRadioButton.AutoSize = true;
+            this.cappuccinoRadioButton.Location = new System.Drawing.Point(19, 19);
+            this.cappuccinoRadioButton.Name = "cappuccinoRadioButton";
+            this.cappuccinoRadioButton.Size = new System.Drawing.Size(82, 17);
+            this.cappuccinoRadioButton.TabIndex = 4;
+            this.cappuccinoRadioButton.Text = "C&appuccino";
+            this.cappuccinoRadioButton.UseVisualStyleBackColor = true;
+            this.cappuccinoRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // BillingForm
             // 
@@ -338,6 +345,7 @@
             this.Name = "BillingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "R \'n R for Reading and Refreshment";
+            this.Load += new System.EventHandler(this.BillingForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -366,7 +374,6 @@
         private System.Windows.Forms.RadioButton icedLatteRadioButton;
         private System.Windows.Forms.RadioButton latteRadioButton;
         private System.Windows.Forms.RadioButton espressoRadioButton;
-        private System.Windows.Forms.RadioButton cappuccinoRadioButton;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.TextBox taxTextBox;
@@ -377,6 +384,7 @@
         private System.Windows.Forms.Button newOrderButton;
         private System.Windows.Forms.Button summaryButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.RadioButton cappuccinoRadioButton;
     }
 }
 
